@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Call — Meet</title>
+<link rel="stylesheet" href="/style.css?v=3">
+</head>
+<body>
+
+<div id="prejoin" class="page prejoin">
+  <h1>Ready to join?</h1>
+  <p id="roomLabel"></p>
+  <div class="card">
+    <input id="prejoinName" type="text" placeholder="Your name" style="width:100%; margin-bottom:12px;">
+    <button class="btn-primary" id="prejoinJoinBtn" style="width:100%;">Join call</button>
+  </div>
+</div>
+
+<div id="callPage" class="call-page" style="display:none;">
+  <div class="call-topbar">
+    <div>Room: <strong id="roomCodeLabel"></strong></div>
+    <div><span id="participantCount">1</span> in call
+      <span id="recPill" class="pill rec" style="display:none">&#9679; REC</span>
+      <span id="ccPill" class="pill" style="display:none">CC on</span></div>
+    <button class="btn-secondary" id="copyLinkBtn" style="padding:6px 12px; font-size:0.8rem;">Copy invite link</button>
+  </div>
+
+  <div id="videoGrid" class="video-grid"></div>
+
+  <div class="controls">
+    <button class="ctrl-btn" id="micBtn" title="Mute/unmute">🎤</button>
+    <button class="ctrl-btn" id="camBtn" title="Camera on/off">📷</button>
+    <button class="ctrl-btn" id="recBtn" title="Start/stop recording">&#9210;</button>
+    <button class="ctrl-btn" id="ccBtn" title="Live captions + transcript (on/off)">CC</button>
+    <button class="ctrl-btn" id="panelBtn" title="Recordings &amp; transcript">&#128193;</button>
+    <button class="ctrl-btn leave" id="leaveBtn" title="Leave call">Leave</button>
+  </div>
+</div>
+
+<div id="caption" class="caption" style="display:none"></div>
+
+<div id="sidePanel" class="side-panel" style="display:none">
+  <div class="side-head"><strong>Recordings &amp; transcript</strong><button class="btn-secondary" id="panelClose" style="padding:4px 10px">&times;</button></div>
+  <h3>Recordings</h3>
+  <div id="recList" class="side-list"><span class="empty-note">None yet</span></div>
+  <h3>Transcript <a id="trDownload" href="#" class="dl">Download .txt</a></h3>
+  <div id="trLog" class="side-list tr-log"><span class="empty-note">Turn on CC to start</span></div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="/call.js?v=3"></script>
+<script src="/features.js?v=3"></script>
+</body>
+</html>

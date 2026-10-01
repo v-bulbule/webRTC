@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet — simple video calls</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="page">
+
+  <div class="brand"><span class="dot"></span><span>Meet</span></div>
+
+  <div class="hero">
+    <h1>Call anyone who has the link.</h1>
+    <p>Start a meeting now, or schedule one for later and share the link.</p>
+  </div>
+
+  <div class="card">
+    <h2>Start or join a call</h2>
+    <div class="row">
+      <input id="nameInput" type="text" placeholder="Your name">
+    </div>
+    <div class="row" style="margin-top:10px;">
+      <button class="btn-primary" id="startBtn">Start instant meeting</button>
+    </div>
+
+    <div class="divider">or join an existing one</div>
+
+    <div class="row">
+      <input id="codeInput" type="text" placeholder="Paste meeting link or code">
+      <button class="btn-secondary" id="joinBtn">Join</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Schedule a meeting</h2>
+    <div class="row">
+      <input id="titleInput" type="text" placeholder="Meeting title">
+      <input id="timeInput" type="datetime-local">
+    </div>
+    <div class="row" style="margin-top:10px;">
+      <button class="btn-secondary" id="scheduleBtn">Schedule</button>
+    </div>
+
+    <div id="meetingList" class="meeting-list"></div>
+    <p id="emptyNote" class="empty-note" style="display:none;">No meetings scheduled yet.</p>
+  </div>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="/home.js"></script>
+</body>
+</html>
